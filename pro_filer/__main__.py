@@ -1,4 +1,4 @@
-"""Arquivo que estudantes não devem editar"""
+"""Arquivo que estudantes não devem editar Teste"""
 
 
 from pro_filer.cli import typer_app
