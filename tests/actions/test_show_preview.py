@@ -6,8 +6,8 @@ from pro_filer.actions.main_actions import show_preview  # NOQA
 @pytest.fixture
 def context():
     return {
-      "all_files": ["src/__init__.py", "src/app.py", "src/utils/__init__.py"],
-      "all_dirs": ["src", "src/utils"]
+      "all_files": ["A", "B", "C", "D", "E", "F"],
+      "all_dirs": ["1", "2", "3", "4", "5", "6"],
     }
 
 
@@ -23,9 +23,9 @@ def test_context(context, capsys):
     show_preview(context)
     assert (
         capsys.readouterr().out
-        == """Found 3 files and 2 directories
-First 5 files: ['src/__init__.py', 'src/app.py', 'src/utils/__init__.py']
-First 5 directories: ['src', 'src/utils']
+        == """Found 6 files and 6 directories
+First 5 files: ['A', 'B', 'C', 'D', 'E']
+First 5 directories: ['1', '2', '3', '4', '5']
 """
     )
 
